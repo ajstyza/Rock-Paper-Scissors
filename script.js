@@ -16,7 +16,7 @@ if (!userChoice) {
 var index = Math.floor(Math.random() * options.length);
 var computerChoice = options[index];
 
-window.alert("the computer chose" + computerChoice);
+window.alert("the computer chose " + computerChoice);
 
 if(userChoice === computerChoice) {
     ties++
@@ -30,6 +30,19 @@ else if (
 ) {
      wins++
     window.alert("you won");
-    }
 }
+    
+else if( 
+    (computerChoice === "R" && userChoice === "S") ||
+    (computerChoice === "P" && userChoice === "R") ||
+    (computerChoice === "S" && userChoice === "P")
+)
+    {
+
+    loses++
+    window.alert("you lost");
+}
+    }
+
+
 playGame();
